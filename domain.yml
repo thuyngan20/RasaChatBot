@@ -1,0 +1,111 @@
+# version: "3.1"
+actions:
+- utter_greet
+- utter_goodbye
+- utter_happy
+- utter_cheer_up
+- utter_did_that_help
+- utter_iamabot
+- utter_food
+- utter_leave
+- actionRecommend
+- utter_give_name
+
+session_config:
+  store_entities_as_slots: true
+
+entities:
+- cust_sex
+- cust_name
+
+slots:
+  # food:
+  #   auto_fill: true
+  #   initial_value: ''
+  #   type: rasa_core.slots.TextSlot
+  cust_sex:
+    auto_fill: true
+    type: text
+# forms: []
+
+intents:
+- greet:
+    use_entities: true
+- goodbye:
+    use_entities: true
+- affirm:
+    use_entities: true
+- deny:
+    use_entities: true
+- mood_great:
+    use_entities: true
+- mood_unhappy:
+    use_entities: true
+- bot_challenge:
+    use_entities: true
+- ask_for_lunch:
+    use_entities: true
+- ask_for_leave:
+    use_entities: true
+- ask_func_list:
+    use_entities: true
+- ask_name_bot:
+    use_entities: true
+- give_name:
+    use_entities: true
+
+
+
+templates:
+  utter_greet:
+  - text: "Hey! How are you?"
+  - text: "Hi! I'm the custom channel greeting"
+    channel: myBot
+
+  utter_goodbye:
+  - text: "Bye"
+  - text: "Goodbye"
+  - text: "Gnite!"
+
+  utter_happy:
+  - text: "Great, carry on!"
+
+  utter_cheer_up:
+  - text: "Here is something to cheer you up:"
+    image: "https://i.imgur.com/nGF1K8f.jpg"
+#utter_cheer_up -> utter_did_that_help
+  utter_did_that_help:
+  - text: "Did that help you?"
+
+  utter_iamabot:
+  - text: "I am a bot, powered by Rasa."
+
+  utter_food:
+  - text: "Today have a rice"
+  - text: "The japan restaurant"
+  - text: "Drink lemon juice"
+  - text: "The mimi restaurant for 3km"
+  - text: "Eat banhmi for breaskfast"
+  - text: "Soup is a good idea!"
+
+  utter_leave:
+  - text: "Report for your leader or register here:"
+    image: "[link]"
+  - text: "2 days"
+
+  utter_unclear:
+  - text: "Sorry, i don't know what you said"
+
+  utter_func_list:
+  - text: "List function Bot can do"
+
+  utter_name_bot:
+  - text: "I am rasa bot"
+
+  utter_give_name:
+  - text: "Hi {cust_sex} {cust_name}. Can Bot help you?""
+
+
+
+
+
