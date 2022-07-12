@@ -1,4 +1,17 @@
-# version: "3.1"
+version: '3.1'
+intents:
+- affirm
+- ask_for_leave
+- ask_for_lunch
+- ask_func_list
+- ask_name_bot
+- bot_challenge
+- deny
+- give_name
+- goodbye
+- greet
+- mood_great
+- mood_unhappy
 actions:
 - utter_greet
 - utter_goodbye
@@ -10,102 +23,65 @@ actions:
 - utter_leave
 - actionRecommend
 - utter_give_name
-
+- action_save_cust_info
+- utter_name_bot
+- utter_func_list
 session_config:
-  store_entities_as_slots: true
-
+  session_expiration_time: 60
+  carry_over_slots_to_new_session: true
 entities:
 - cust_sex
 - cust_name
-
 slots:
-  # food:
-  #   auto_fill: true
-  #   initial_value: ''
-  #   type: rasa_core.slots.TextSlot
-  cust_sex:
-    auto_fill: true
+  cust_name:
     type: text
-# forms: []
-
-intents:
-- greet:
-    use_entities: true
-- goodbye:
-    use_entities: true
-- affirm:
-    use_entities: true
-- deny:
-    use_entities: true
-- mood_great:
-    use_entities: true
-- mood_unhappy:
-    use_entities: true
-- bot_challenge:
-    use_entities: true
-- ask_for_lunch:
-    use_entities: true
-- ask_for_leave:
-    use_entities: true
-- ask_func_list:
-    use_entities: true
-- ask_name_bot:
-    use_entities: true
-- give_name:
-    use_entities: true
-
-
-
-templates:
+    influence_conversation: true
+    initial_value: ''
+    mappings:
+    - type: custom
+  cust_sex:
+    type: text
+    influence_conversation: true
+    initial_value: 'bạn '
+    mappings:
+    - type: custom
+responses:
   utter_greet:
-  - text: "Hey! How are you?"
-  - text: "Hi! I'm the custom channel greeting"
-    channel: myBot
-
+    - text: Hey! How are you?
+    - text: Hi! I'm the custom channel greeting
+      channel: myBot
   utter_goodbye:
-  - text: "Bye"
-  - text: "Goodbye"
-  - text: "Gnite!"
-
+    - text: Bye
+    - text: Goodbye
+    - text: Gnite!
   utter_happy:
-  - text: "Great, carry on!"
-
+    - text: Tuyệt vời
   utter_cheer_up:
-  - text: "Here is something to cheer you up:"
-    image: "https://i.imgur.com/nGF1K8f.jpg"
-#utter_cheer_up -> utter_did_that_help
+    - text: 'Here is something to cheer you up:'
+      image: https://i.imgur.com/nGF1K8f.jpg
   utter_did_that_help:
-  - text: "Did that help you?"
-
+    - text: Did that help you?
   utter_iamabot:
-  - text: "I am a bot, powered by Rasa."
-
+    - text: I am a bot, powered by Rasa.
+    - text: Mình là bot, mình tên là Mimi
   utter_food:
-  - text: "Today have a rice"
-  - text: "The japan restaurant"
-  - text: "Drink lemon juice"
-  - text: "The mimi restaurant for 3km"
-  - text: "Eat banhmi for breaskfast"
-  - text: "Soup is a good idea!"
-
+    - text: Hôm nay có cơm gà
+    - text: The japan restaurant
+    - text: Gà rán với coca là best choice!
+    - text: Nhà hàng MIMI cách đây 3km
+    - text: Buổi sáng thì nên ăn bánh mì nha
+    - text: Soup is a good idea!
   utter_leave:
-  - text: "Report for your leader or register here:"
-    image: "[link]"
-  - text: "2 days"
-
+    - text: 'Report for your leader or register here:'
+      image: https://rasa.com/docs/rasa
   utter_unclear:
-  - text: "Sorry, i don't know what you said"
-
+    - text: Sorry, i don't know what you said
   utter_func_list:
-  - text: "List function Bot can do"
-
+    - text: Chức năng của mình nè, bạn {cust_name} tham khảo nha!\
+            1. Gợi ý món ăn
+            2. Gợi ý quán ăn gần nhất
+            3. Vấn đề liên quan đến phép nghỉ
   utter_name_bot:
-  - text: "I am rasa bot"
-
+    - text: I am mimi bot
   utter_give_name:
-  - text: "Hi {cust_sex} {cust_name}. Can Bot help you?""
-
-
-
-
-
+    - text: Hi {cust_sex} {cust_name}. Can Bot help you?

@@ -1,0 +1,14 @@
+version: "3.1"
+stories:
+- story: happy path 1 (./tests/test_stories.yml)
+  steps:
+  - intent: greet  # predicted: None: hello
+  - action: utter_greet
+  - intent: mood_great  # predicted: None: amazing
+  - action: utter_happy
+- story: ask name bot 1 (./tests/test_stories.yml)
+  steps:
+  - intent: greet  # predicted: None: hello
+  - action: utter_greet
+  - intent: ask_name_bot  # predicted: None: what your name
+  - action: utter_name_bot

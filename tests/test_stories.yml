@@ -1,7 +1,6 @@
 version: "3.1"
 
 stories:
-
 - story: happy path 1
   steps:
   - user: |
@@ -13,4 +12,18 @@ stories:
     intent: mood_great
   - action: utter_happy
 
-- story: 
+- story: ask name bot 1
+  steps:
+  - user: |
+      hello
+    intent: greet
+  - action: utter_greet
+  - user: |
+      what your name
+    intent: ask_name_bot
+  - action: utter_name_bot
+
+- story: ask name bot 2
+  steps:
+  - intent: ask_name_bot
+  - action: utter_name_bot

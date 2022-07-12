@@ -5,6 +5,7 @@ from xxlimited import foo
 from rasa_sdk import Action, Tracker
 from rasa_sdk.executor import CollectingDispatcher
 from rasa.core.channels.channel import InputChannel
+from rasa_sdk.events import SlotSet
 
 import random
 
@@ -12,11 +13,11 @@ DATABASE = ['Bun bo','Mi quang','Banh canh','Com suon',
             'Hu tieu','Goi cuon','An hai','An nan','An chay',
             'An gi cung duoc','BeefSteak','Hotpot','Grill']
 
-
-class MyIO(InputChannel):
-    def name() -> Text:
-        "Mini Bot"
-        return "myBot"
+def name_cap(text):
+    tarr = text.split()
+    for idx in range(len(tarr)):
+        tarr[idx] = tarr[idx].capitalize()
+    return ' '.join(tarr)
 
 class action_save_cust_info(Action):
     def name(self):

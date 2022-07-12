@@ -1,151 +1,164 @@
 version: "3.1"
 
+nlu:
 - intent: greet
-  examples:
-  - hey
-  - hello
-  - hi
-  - hello there
-  - good morning
-  - good evening
-  - hey there
-  - let's go
-  - hey dude
-  - good morning
-  - good evening
-  - good afternoon
-
+  examples: |
+    - hey
+    - hello
+    - hi
+    - hello there
+    - good morning
+    - good evening
+    - good afternoon
+    - morning
+    - hey there
+    - let's go
+    - hey dude
+    - chào
+    - xin chào
+    - chào buổi sáng
+    - ping
+    - khỏe không bot
 - intent: goodbye
-  examples:
-  - cu
-  - good by
-  - cee you later
-  - good night
-  - bye
-  - goodbye
-  - have a nice day
-  - see you around
-  - bye bye
-  - see you later
+  examples: |
+    - cu
+    - good by
+    - cee you later
+    - good night
+    - bye
+    - goodbye
+    - have a nice day
+    - see you around
+    - bye bye
+    - see you later
+    - see you
+    - tạm biệt
+    - tạm biệt nhé
+    - bai bai
 
 - intent: affirm
-  examples:
-  - yes
-  - indeed
-  - of course
-  - that sounds good
-  - correct
+  examples: |
+    - yes
+    - indeed
+    - of course
+    - that sounds good
+    - correct
+    - ok
+    - okay
+    - cảm ơn bot
+    - tôi hiểu rồi
 
 - intent: deny
-  examples:
-  - no
-  - never
-  - I don't think so
-  - don't like that
-  - no way
-  - not really
+  examples: |
+    - no
+    - never
+    - I don't think so
+    - don't like that
+    - no way
+    - not really
+    - không
 
 - intent: mood_great
-  examples:
-  - perfect
-  - great
-  - amazing
-  - feeling like a king
-  - wonderful
-  - I am feeling very good
-  - I am great
-  - I am amazing
-  - I am going to save the world
-  - super stoked
-  - extremely good
-  - so so perfect
-  - so good
-  - so perfect
+  examples: |
+    - perfect
+    - great
+    - amazing
+    - feeling like a king
+    - wonderful
+    - I am feeling very good
+    - I am great
+    - I am amazing
+    - I am going to save the world
+    - super stoked
+    - extremely good
+    - so so perfect
+    - so good
+    - so perfect
+    - tuyệt vời
 
 - intent: mood_unhappy
-  examples:
-  - my day was horrible
-  - I am sad
-  - I don't feel very well
-  - I am disappointed
-  - super sad
-  - I'm so sad
-  - sad
-  - very sad
-  - unhappy
-  - not good
-  - not very good
-  - extremly sad
-  - so sad
+  examples: |
+    - my day was horrible
+    - I am sad
+    - I don't feel very well
+    - I am disappointed
+    - super sad
+    - I'm so sad
+    - sad
+    - very sad
+    - unhappy
+    - not good
+    - not very good
+    - extremly sad
+    - so sad
 
 - intent: bot_challenge
-  examples:
-  - are you a bot?
+  examples: |
+    - are you a bot?
+    - mày có phải là bot không
 
 - intent: ask_for_lunch
-  examples:
-  - what eat today
-  - what to eat in the morning
-  - what to eat for lunch
-  - what to eat in the afternoon
-  - what to eat in the evening
-  - do you have any vegetarian dishes
-  - help you choose a restaurant
-  - are there any restaurants nearby
-  - what do you drink in the afternoon
+  examples: |
+    - hôm nay ăn gì
+    - hôm nay ăn gì bot nhỉ
+    - buổi sáng thì ăn gì
+    - trưa nay ăn gì
+    - bot biết món gì ngon không
 
 - intent: ask_for_leave
-  examples:
-  - Where to apply for leave?
-  - How many days off am I allowed?
+  examples: |
+    - tôi muốn đăng kí nghỉ
+    - đăng kí nghỉ
+    - nghỉ phép
+    - muốn nghỉ phép thì xin ai
+    - nghỉ phép có lương không
 
 - intent: ask_name_bot
-  examples:
-  - what your name
-  - what can i call you
+  examples: |
+    - bot tên chi
+    - gọi bot bằng tên gì
 
 - intent: ask_func_list
-  examples:
-  - you can be doing what
-  - what can you help with
-  - your function is what
-  - you can be doing some function
-  - what are you best at?
-  - you have a private help me be not
-  - what are you doing
-  - see you are doing what
-  - let me know what you can do
-  - you owner as any world
-  - What are you useful in?
-  - What are you best at?
-  - I'm curious about what you're doing
-  - I don't know what you can do
-  - what are your worst at work?
-  - you know what's in the field
-  - you good support all in the field
-  - tell me what you can do
-  - Tell me about the things you can help me with
-  - What can you do for me
-  - you can do what
-  - What can I help
-  - what are you doing
-  - Do you know what to do
-  - I know what to do
-  - Do you know what to do
-  - know what to do
-  - what can be done
-  - have what
-  - have made something
-  - help what?
-  - know what to say
-  - what can be done
-  - what can you help with
-  - what can you do?
-  - do you know anything
+  examples: |
+    - you can be doing what
+    - what can you help with
+    - your function is what
+    - you can be doing some function
+    - what are you best at?
+    - you have a private help me be not
+    - what are you doing
+    - see you are doing what
+    - let me know what you can do
+    - you owner as any world
+    - What are you useful in?
+    - What are you best at?
+    - I'm curious about what you're doing
+    - I don't know what you can do
+    - what are your worst at work?
+    - you know what's in the field
+    - you good support all in the field
+    - tell me what you can do
+    - Tell me about the things you can help me with
+    - What can you do for me
+    - you can do what
+    - What can I help
+    - what are you doing
+    - Do you know what to do
+    - I know what to do
+    - Do you know what to do
+    - know what to do
+    - what can be done
+    - have what
+    - have made something
+    - help what?
+    - know what to say
+    - what can be done
+    - what can you help with
+    - what can you do?
+    - do you know anything
 
 - intent: give_name
-  examples:
-  - [Mr.]{cust_sex} is [thang]{cust_name}
-  - [Mrs.]{cust_sex} is [van]{cust_name}
-
+  examples: |
+    - [Mr.](cust_sex) is [thang](cust_name)
+    - [Mrs.](cust_sex) is [van](cust_name)
 

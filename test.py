@@ -6,6 +6,6 @@ def run_test(text):
     response = requests.post(url, data=json.dumps({"sender": "default", "message":text}))
     print(response.json()[0]["text"])
 
-run_test("Mr. is thang")
+run_test("")
 sleep(2)
-run_test("Mrs. is van")
+

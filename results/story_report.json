@@ -1,0 +1,69 @@
+{
+  "ask_name_bot": {
+    "precision": 1.0,
+    "recall": 0.5,
+    "f1-score": 0.6666666666666666,
+    "support": 2
+  },
+  "utter_happy": {
+    "precision": 1.0,
+    "recall": 1.0,
+    "f1-score": 1.0,
+    "support": 1
+  },
+  "utter_greet": {
+    "precision": 1.0,
+    "recall": 1.0,
+    "f1-score": 1.0,
+    "support": 2
+  },
+  "greet": {
+    "precision": 0.0,
+    "recall": 0.0,
+    "f1-score": 0.0,
+    "support": 2
+  },
+  "utter_name_bot": {
+    "precision": 1.0,
+    "recall": 1.0,
+    "f1-score": 1.0,
+    "support": 2
+  },
+  "action_listen": {
+    "precision": 1.0,
+    "recall": 1.0,
+    "f1-score": 1.0,
+    "support": 5
+  },
+  "mood_great": {
+    "precision": 0.0,
+    "recall": 0.0,
+    "f1-score": 0.0,
+    "support": 1
+  },
+  "micro avg": {
+    "precision": 1.0,
+    "recall": 0.7333333333333333,
+    "f1-score": 0.846153846153846,
+    "support": 15
+  },
+  "macro avg": {
+    "precision": 0.7142857142857143,
+    "recall": 0.6428571428571429,
+    "f1-score": 0.6666666666666666,
+    "support": 15
+  },
+  "weighted avg": {
+    "precision": 0.8,
+    "recall": 0.7333333333333333,
+    "f1-score": 0.7555555555555554,
+    "support": 15
+  },
+  "accuracy": 0.7333333333333333,
+  "conversation_accuracy": {
+    "accuracy": 0.3333333333333333,
+    "correct": 1,
+    "with_warnings": 0,
+    "total": 3
+  }
+}
