@@ -1,12 +1,13 @@
 from telnetlib import DO
 from typing import Any, Text, Dict, List
 from xxlimited import foo
-
+from rasa_core.actions import Action
+from rasa_core_sdk import Action
+from rasa_core_sdk.events import SlotSet
 from rasa_sdk import Action, Tracker
 from rasa_sdk.executor import CollectingDispatcher
 from rasa.core.channels.channel import InputChannel
 from rasa_sdk.events import SlotSet
-
 import random
 
 DATABASE = ['Bun bo','Mi quang','Banh canh','Com suon',

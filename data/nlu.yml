@@ -94,8 +94,7 @@ nlu:
 
 - intent: bot_challenge
   examples: |
-    - are you a bot?
-    - mày có phải là bot không
+    - có phải là bot không
 
 - intent: ask_for_lunch
   examples: |
@@ -115,47 +114,16 @@ nlu:
 
 - intent: ask_name_bot
   examples: |
-    - bot tên chi
-    - gọi bot bằng tên gì
+    - bot tên gì
+    - tên của bot
 
 - intent: ask_func_list
   examples: |
-    - you can be doing what
-    - what can you help with
-    - your function is what
-    - you can be doing some function
-    - what are you best at?
-    - you have a private help me be not
-    - what are you doing
-    - see you are doing what
-    - let me know what you can do
-    - you owner as any world
-    - What are you useful in?
-    - What are you best at?
-    - I'm curious about what you're doing
-    - I don't know what you can do
-    - what are your worst at work?
-    - you know what's in the field
-    - you good support all in the field
-    - tell me what you can do
-    - Tell me about the things you can help me with
-    - What can you do for me
-    - you can do what
-    - What can I help
-    - what are you doing
-    - Do you know what to do
-    - I know what to do
-    - Do you know what to do
-    - know what to do
-    - what can be done
-    - have what
-    - have made something
-    - help what?
-    - know what to say
-    - what can be done
-    - what can you help with
-    - what can you do?
-    - do you know anything
+    - Bạn có thể làm gì
+    - Bạn làm được gì
+    - Chức năng
+    - Chức năng của bot
+    - Bạn có thể giúp gì cho tôi
 
 - intent: give_name
   examples: |

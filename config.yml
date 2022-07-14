@@ -78,3 +78,7 @@ policies:
 #     max_history: 5
 #     epochs: 100
 #     constrain_similarities: true
+action_endpoint:
+    url: 'http://action_server:5055/webhook'
+nlu:
+    url: 'http://rasa_nlu:5000'

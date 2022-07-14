@@ -47,37 +47,27 @@ slots:
     - type: custom
 responses:
   utter_greet:
-    - text: Hey! How are you?
-    - text: Hi! I'm the custom channel greeting
-      channel: myBot
+    - text: Xin chao {cust_name}! Ban khoe khong?
   utter_goodbye:
-    - text: Bye
-    - text: Goodbye
-    - text: Gnite!
+    - text: Tam biet
   utter_happy:
     - text: Tuyệt vời
   utter_cheer_up:
     - text: 'Here is something to cheer you up:'
       image: https://i.imgur.com/nGF1K8f.jpg
   utter_did_that_help:
-    - text: Did that help you?
+    - text: Toi co the giup gi cho ban?
   utter_iamabot:
-    - text: I am a bot, powered by Rasa.
     - text: Mình là bot, mình tên là Mimi
   utter_food:
     - text: Hôm nay có cơm gà
-    - text: The japan restaurant
-    - text: Gà rán với coca là best choice!
-    - text: Nhà hàng MIMI cách đây 3km
-    - text: Buổi sáng thì nên ăn bánh mì nha
-    - text: Soup is a good idea!
   utter_leave:
     - text: 'Report for your leader or register here:'
       image: https://rasa.com/docs/rasa
   utter_unclear:
     - text: Sorry, i don't know what you said
   utter_func_list:
-    - text: Chức năng của mình nè, bạn {cust_name} tham khảo nha!\
+    - text: Chức năng của mình nè, bạn {cust_name} tham khảo nha!
             1. Gợi ý món ăn
             2. Gợi ý quán ăn gần nhất
             3. Vấn đề liên quan đến phép nghỉ
