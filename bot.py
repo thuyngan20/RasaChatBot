@@ -10,7 +10,7 @@ action_endpoint = EndpointConfig(url="http://localhost:5055/webhooks/slack/webho
 
 agent = Agent.load('./models/dialogue', interpreter = nlu_interpreter, action_endpoint = action_endpoint)
 
-input_channel = SlackInput(slack_token="xoxb-3791814281347-3800042121380-O5P2DOdTZtPrxowhS0IYf9Yf")
+input_channel = SlackInput(slack_token="xoxp-3791814281347-3788964565781-3788459649559-e1a8a6eb3b08b5a4cf295c0780cc06a2")
 
 agent.handle_channels([input_channel], 5002, serve_forever=True)
 

@@ -8,11 +8,13 @@ from rasa_sdk import Action, Tracker
 from rasa_sdk.executor import CollectingDispatcher
 from rasa.core.channels.channel import InputChannel
 from rasa_sdk.events import SlotSet
+# from rasa_sdk.interfaces import Action
 import random
 
-DATABASE = ['Bun bo','Mi quang','Banh canh','Com suon',
-            'Hu tieu','Goi cuon','An hai','An nan','An chay',
-            'An gi cung duoc','BeefSteak','Hotpot','Grill']
+DATABASE = ['bún bò','mì quảng gà','mì quảng tôm thịt','bánh canh cá lóc',
+            'bánh canh chả','bánh canh xương chả','cơm sườn',
+            'hủ tiếu','gỏi cuốn','cháo bò','miến lươn','bún lòng xào nghệ',
+            'bún riêu','cơm tấm','bánh ướt lòng gà','bánh hỏi lòng heo']
 
 def name_cap(text):
     tarr = text.split()
@@ -32,14 +34,14 @@ class action_save_cust_info(Action):
         bot_position = "SHB"
 
         if (cust_sex is  None):
-            cust_sex = "Quý khách"
+            cust_sex = "bạn"
 
         if (cust_sex == "anh") | (cust_sex == "chị"):
            bot_position = "em"
         elif (cust_sex == "cô") | (cust_sex == "chú"):
             bot_position = "cháu"
         else:
-            cust_sex = "Quý khách"
+            cust_sex = "bạn"
             bot_position = "SHB"
 
         if not cust_name:
@@ -52,7 +54,7 @@ class action_save_cust_info(Action):
 class actionRecommend(Action):
 
     def name(self) -> Text:
-        return "utter_food"
+        return "action_food_recommend"
 
     def run(self, dispatcher: CollectingDispatcher,
             tracker: Tracker,
@@ -63,8 +65,16 @@ class actionRecommend(Action):
           food_number = random.randrange(len(DATABASE))
           food.append(DATABASE[food_number])
 
-        print("food")
-
-        dispatcher.utter_message(text="I think today you can try '{}' or besides may be is '{}'. It so tasty!".format(food[0], food[1]))
+        dispatcher.utter_message(text="Tôi nghĩ bạn nên thử  {} ,hoặc {} cũng là một sự lựa chọn tuyệt vời, món nào cũng ngon!".format(food[0], food[1]))
 
         return []
+
+
+# class ActionGreet(Action):
+#     def name(self):
+#         return 'action_greet'
+
+#     def run(self, dispatcher, tracker, domain):
+#         dispatcher.utter_button_message('some text that can be ignored', button)
+#     return []
+

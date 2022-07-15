@@ -14,11 +14,15 @@ nlu:
     - hey there
     - let's go
     - hey dude
-    - chào
+    - what's up
     - xin chào
-    - chào buổi sáng
+    - chao buoi sang
     - ping
+
+- intent: health_bot
+  examples: |
     - khỏe không bot
+
 - intent: goodbye
   examples: |
     - cu
@@ -47,6 +51,7 @@ nlu:
     - okay
     - cảm ơn bot
     - tôi hiểu rồi
+    - cam on
 
 - intent: deny
   examples: |

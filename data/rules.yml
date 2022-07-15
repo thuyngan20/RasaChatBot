@@ -16,3 +16,13 @@ rules:
   steps:
   - intent: greet
   - action: utter_greet
+
+- rule: Ask for lunch
+  steps:
+  - intent: ask_for_lunch
+  - action: action_food_recommend
+
+- rule: Ask health of bot
+  steps:
+  - intent: ask_for_health
+  - action: utter_health_bot

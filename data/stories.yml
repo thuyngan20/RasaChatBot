@@ -1,14 +1,14 @@
 version: "3.1"
 
 stories:
-- story: happy path 1
+- story: greetings 1
   steps:
   - intent: greet
   - action: utter_greet
   - intent: mood_great
   - action: utter_happy
 
-- story: sad path 1
+- story: greetings 1
   steps:
   - intent: greet
   - action: utter_greet
@@ -17,6 +17,16 @@ stories:
   - action: utter_did_that_help
   - intent: affirm
   - action: utter_happy
+
+- story: ask_health_bot
+  steps:
+  - intent: health_bot
+  - action: utter_health_bot
+
+- story : saybye
+  steps:
+  - intent: goodbye
+  - action: utter_goodbye
 
 - story: sad path 2
   steps:
@@ -27,29 +37,6 @@ stories:
   - action: utter_did_that_help
   - intent: deny
   - action: utter_goodbye
-
-- story: sad path 3
-  steps:
-  - intent: greet
-  - action: utter_greet
-  - intent: ask_for_lunch
-  - action: utter_food
-  - intent: affirm
-  - action: utter_happy
-
-- story: sad path 4
-  steps:
-  - intent: greet
-  - action: utter_greet
-  - intent: ask_for_lunch
-  - action: utter_food
-  - intent: deny
-  - action: utter_goodbye
-
-- story: sad path 5
-  steps:
-  - intent: ask_for_lunch
-  - action: utter_food
 
 #ask_for_leave
 - story: sad path 6
@@ -112,27 +99,35 @@ stories:
   - intent: ask_func_list
   - action: utter_func_list
 
-- story: ask name bot 1
-  steps:
-  - intent: greet
-  - action: utter_greet
-  - intent: ask_name_bot
-  - action: utter_name_bot
+# - story: ask name bot 1
+#   steps:
+#   - intent: greet
+#   - action: utter_greet
+#   - intent: ask_name_bot
+#   - action: utter_name_bot
 
-- story: ask name bot 2
-  steps:
-  - intent: ask_name_bot
-  - action: utter_name_bot
+# - story: ask name bot 2
+#   steps:
+#   - intent: ask_name_bot
+#   - action: utter_name_bot
 
-- story: give name 1
-  steps:
-  - intent: greet
-  - action: utter_greet
-  - intent: give_name
-  - action: utter_give_name
+# - story: give name 1
+#   steps:
+#   - intent: greet
+#   - action: utter_greet
+#   - intent: give_name
+#   - action: utter_give_name
 
-- story: give name 2
+# - story: give name 2
+#   steps:
+#   - intent: give_name
+#   - action: utter_give_name
+
+- story: suggest lunch
   steps:
-  - intent: give_name
-  - action: utter_give_name
+  - intent: ask_for_lunch
+  - action: action_food_recommend
+
+
+
 

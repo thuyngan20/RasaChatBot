@@ -12,6 +12,7 @@ intents:
 - greet
 - mood_great
 - mood_unhappy
+- health_bot
 actions:
 - utter_greet
 - utter_goodbye
@@ -19,12 +20,11 @@ actions:
 - utter_cheer_up
 - utter_did_that_help
 - utter_iamabot
-- utter_food
+- action_greet
 - utter_leave
-- actionRecommend
+- action_food_recommend
 - utter_give_name
 - action_save_cust_info
-- utter_name_bot
 - utter_func_list
 session_config:
   session_expiration_time: 60
@@ -42,36 +42,39 @@ slots:
   cust_sex:
     type: text
     influence_conversation: true
-    initial_value: 'bạn '
+    initial_value: 'bạn'
     mappings:
     - type: custom
 responses:
   utter_greet:
-    - text: Xin chao {cust_name}! Ban khoe khong?
+    - text: 'Xin chào {cust_sex}!. Bạn khỏe không?'
   utter_goodbye:
-    - text: Tam biet
+    - text: 'Chào{cust_sex}nhé!'
   utter_happy:
-    - text: Tuyệt vời
+    - text: 'Tuyệt vời, chúc bạn một ngày tốt lành!'
+    # buttons:
+    # - title: "great"
+    #   payload: "/mood_great"
+  utter_health_bot:
+    - text: 'Bot khoe, cam on ban. Love you 3000 <3'
   utter_cheer_up:
     - text: 'Here is something to cheer you up:'
       image: https://i.imgur.com/nGF1K8f.jpg
   utter_did_that_help:
-    - text: Toi co the giup gi cho ban?
+    - text: Tôi có thể giúp gì cho bạn?
   utter_iamabot:
-    - text: Mình là bot, mình tên là Mimi
-  utter_food:
-    - text: Hôm nay có cơm gà
+    - text: Mình là bot, mình tên là Mimi.
+  # utter_food:
+  #   - text: Hôm nay có cơm gà
   utter_leave:
-    - text: 'Report for your leader or register here:'
+    - text: 'Liên hệ cho leader của bạn hoặc đăng kí tại link dưới đây:'
       image: https://rasa.com/docs/rasa
   utter_unclear:
-    - text: Sorry, i don't know what you said
+    - text: Xin lỗi, bot chưa hiểu ý của bạn, vui lòng nói rõ hơn ạ, bot cảm ơn <3
   utter_func_list:
-    - text: Chức năng của mình nè, bạn {cust_name} tham khảo nha!
+    - text: Chức năng của mình nè, bạn tham khảo nha!\n
             1. Gợi ý món ăn
             2. Gợi ý quán ăn gần nhất
             3. Vấn đề liên quan đến phép nghỉ
-  utter_name_bot:
-    - text: I am mimi bot
   utter_give_name:
-    - text: Hi {cust_sex} {cust_name}. Can Bot help you?
+    - text: Hi {cust_sex}{cust_name}. Can Bot help you?
